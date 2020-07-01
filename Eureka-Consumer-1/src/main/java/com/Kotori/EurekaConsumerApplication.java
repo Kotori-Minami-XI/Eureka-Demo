@@ -5,8 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-public class EurekaProviderApplication {
+@EnableDiscoveryClient // 开启EurekaClient功能
+public class EurekaConsumerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EurekaProviderApplication.class);
+        SpringApplication.run(EurekaConsumerApplication.class);
     }
 }
