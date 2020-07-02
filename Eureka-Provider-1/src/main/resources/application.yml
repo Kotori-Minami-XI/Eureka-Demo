@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 9001
 spring:
   application:
     name: eureka-provider-group # 应用名称，会在Eureka中显示

@@ -14,15 +14,9 @@ public class ConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @LoadBalanced
-    @Bean
-    public RestTemplate rest() {
-        return new RestTemplate();
-    }
-
     @ResponseBody
     @RequestMapping("/sayHello")
     public String sayHello(String name) {
-        return restTemplate.getForObject("http://eureka-provider-group/hello?name=" + name, String.class);
+        return restTemplate.getForObject("http://eureka-provider-group/hello?name=" + name + "---consumer1", String.class);
     }
 }
